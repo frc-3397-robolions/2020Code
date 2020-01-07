@@ -102,6 +102,7 @@ public static Climber climber;
     @Override
     public void autonomousPeriodic() {
         Scheduler.getInstance().run();
+        
     }
 
     @Override

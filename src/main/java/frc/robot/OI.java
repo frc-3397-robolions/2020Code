@@ -81,6 +81,8 @@ public XboxController getXboxController() {
 public Joystick getFightStick() {
     return fightStick;
     }
+
+// Xbox Controls
 public boolean getXButton() {
     return xboxController.getXButtonPressed();
 }
@@ -90,16 +92,33 @@ public boolean getYButton() {
 public boolean getBButton(){
     return xboxController.getBButtonPressed();
 }
-public boolean getABUtton(){
+public boolean getAButton(){
     return xboxController.getAButtonPressed();
 }
-public double getLeftJoyStick(){
+public double getLeftTrigger(){
     return xboxController.getTriggerAxis(Hand.kLeft);
-
+    
 }
-public double getRightJoyStick(){
+public double getRightTrigger(){
     return xboxController.getTriggerAxis(Hand.kRight);
 }
+public double getLeftJoystickY(){
+    return xboxController.getRawAxis(1);
+}
+public double getLeftJoystickX(){
+    return xboxController.getRawAxis(0);
+}
+public double getRightJoystickY(){
+    return xboxController.getRawAxis(5);
+}
+public double getRightJoystickX(){
+    return xboxController.getRawAxis(4);
+}
+
+
+
+
+// FightStick Controls 
 public double getFSVerticalStick(){
     return fightStick.getRawAxis(1);
 }

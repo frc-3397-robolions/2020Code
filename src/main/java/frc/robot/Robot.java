@@ -121,5 +121,10 @@ public static Climber climber;
     @Override
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
+        if (oi.getLeftJoystickY() != 0 || oi.getLeftJoystickX() != 0){
+            driveTrain.runMecanumDrive(oi.getLeftJoystickY(), oi.getLeftJoystickX(), 0);
+        } else {
+            driveTrain.runMecanumDrive(0, 0, 0);
+        }
     }
 }

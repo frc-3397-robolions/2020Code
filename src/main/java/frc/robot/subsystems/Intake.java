@@ -60,9 +60,16 @@ public class Intake extends Subsystem {
 
     }
 
-    public void runIntake(double speed){
-        leftIntake.setSpeed(speed);
-        rightIntake.setSpeed(speed);
+    public void runIntake(double speed, boolean twoMotors){
+        if(twoMotors){
+            leftIntake.setSpeed(speed);
+            rightIntake.setSpeed(speed);
+        } else { 
+            leftIntake.setSpeed(speed);
+            
+        }
+
+       
     }
   
 

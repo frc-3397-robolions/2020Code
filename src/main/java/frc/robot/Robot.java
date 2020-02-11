@@ -170,16 +170,12 @@ public class Robot extends TimedRobot {
         System.out.println(centerXEntry);
         final double xSpeed = -m_xspeedLimiter.calculate(oi.getLeftJoystickX());
         final double ySpeed = -m_yspeedLimiter.calculate(oi.getLeftJoystickY());
-        final double rot = -m_rotLimiter.calculate(oi.getRightJoystickX());
+        final double rot = m_rotLimiter.calculate(oi.getRightJoystickX());
         SmartDashboard.putNumber("xSpeed", xSpeed);
         SmartDashboard.putNumber("ySpeed", ySpeed);
         SmartDashboard.putNumber("rotSpeed", rot);
-        if (oi.getLeftJoystickY() != 0 || oi.getLeftJoystickX() != 0){
-            driveTrain.runMecanumDrive(oi.getLeftJoystickY(), oi.getLeftJoystickX(), oi.getRightJoystickX());
-        } else {
-            driveTrain.runMecanumDrive(ySpeed, xSpeed, rot);
-            
-        }
+      
+        driveTrain.runMecanumDrive(xSpeed, ySpeed, rot);
         
         
         // if (oi.getAButton()){

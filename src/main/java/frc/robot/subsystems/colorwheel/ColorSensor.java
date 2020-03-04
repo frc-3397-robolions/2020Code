@@ -1,4 +1,4 @@
-package frc.robot;
+package frc.robot.subsystems.colorwheel;
 
 import edu.wpi.first.wpilibj.I2C;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;

@@ -8,7 +8,7 @@
 // update. Deleting the comments indicating the section will prevent
 // it from being updated in the future.
 
-package frc.robot;
+package frc.robot.core;
 
 import edu.wpi.first.hal.FRCNetComm.tInstances;
 import edu.wpi.first.hal.FRCNetComm.tResourceType;
@@ -18,10 +18,14 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.subsystems.Climber;
-import frc.robot.subsystems.DriveTrain;
-import frc.robot.subsystems.Intake;
-import frc.robot.subsystems.Shooter;
+import frc.robot.controls.OI;
+import frc.robot.subsystems.climber.ClimberBase;
+import frc.robot.subsystems.drivetrain.*;
+import frc.robot.subsystems.shooter.*;
+import frc.robot.subsystems.intake.*;
+import frc.robot.subsystems.colorwheel.*;
+
+
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -39,7 +43,7 @@ public class Robot extends TimedRobot {
     public static DriveTrain driveTrain;
     public static Intake intake;
     public static Shooter shooter;
-    public static Climber climber;
+    public static ClimberBase climber;
  
     ColorSensor cSensor;
     private SlewRateLimiter m_xspeedLimiter = new SlewRateLimiter(3);
@@ -65,7 +69,7 @@ public class Robot extends TimedRobot {
         driveTrain = new DriveTrain();
         intake = new Intake();
         shooter = new Shooter();
-        climber = new Climber();
+        climber = new ClimberBase();
         // cSensor = new ColorSensor();
       
         oi = new OI();

@@ -9,7 +9,7 @@
 // it from being updated in the future.
 
 
-package frc.robot;
+package frc.robot.controls;
 
 import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.Joystick;

@@ -1,16 +1,17 @@
-package frc.robot.subsystems;
+package frc.robot.subsystems.auto;
 
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class VisionProc extends Subsystem {
+public class Camera extends Subsystem {
     NetworkTableEntry centerXEntry;
-    public VisionProc(){
+    public Camera(){
         NetworkTableInstance  inst = NetworkTableInstance.getDefault();
         NetworkTable table = inst.getTable("pi");
         centerXEntry = table.getEntry("centerX");
+        
     }
 
     @Override

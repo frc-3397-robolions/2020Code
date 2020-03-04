@@ -1,4 +1,4 @@
-package frc.robot;
+package frc.robot.subsystems.auto;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;

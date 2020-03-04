@@ -92,6 +92,9 @@ public boolean getBButton(){
 public boolean getAButton(){
     return xboxController.getAButton();
 }
+public boolean getAPressed(){
+    return xboxController.getAButtonPressed();
+}
 public double getLeftTrigger(){
     return xboxController.getTriggerAxis(Hand.kLeft);
     

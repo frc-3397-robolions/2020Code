@@ -32,9 +32,9 @@ public class DriveTrainOperator {
             base.runRightRear(0);
         }
         if (oi.xBox().getBButton()){
-            base.runrightFront(1);
+            base.runRightFront(1);
          } else {
-             base.runrightFront(0);
+             base.runRightFront(0);
          }
          
         if (oi.xBox().getYButton()){

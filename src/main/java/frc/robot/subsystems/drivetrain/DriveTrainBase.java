@@ -13,16 +13,16 @@ public class DriveTrainBase {
     private MecanumDrive mecanumDrive;
 
     public DriveTrainBase(){
-        leftFront = new Victor(RobotConstants.LEFT_FRONT_MOTOR_PWM);
+        leftFront = new Victor(RobotConstants.PWMConstants.LEFT_FRONT_MOTOR_PWM);
         leftFront.setInverted(false);
         
-        leftRear = new Victor(RobotConstants.LEFT_REAR_MOTOR_PWM);
+        leftRear = new Victor(RobotConstants.PWMConstants.LEFT_REAR_MOTOR_PWM);
         leftRear.setInverted(false);
 
-        rightFront = new Victor(RobotConstants.RIGHT_FRONT_MOTOR_PWM);
+        rightFront = new Victor(RobotConstants.PWMConstants.RIGHT_FRONT_MOTOR_PWM);
         rightFront.setInverted(false);
 
-        rightRear = new Victor(RobotConstants.RIGHT_REAR_MOTOR_PWM);
+        rightRear = new Victor(RobotConstants.PWMConstants.RIGHT_REAR_MOTOR_PWM);
         rightRear.setInverted(false);
 
         mecanumDrive = new MecanumDrive(leftFront, leftRear, rightFront, rightRear);
@@ -49,7 +49,7 @@ public class DriveTrainBase {
     public void runLeftFront(double speed){
         leftFront.setSpeed(speed);
     }
-    public void runrightFront(double speed){
+    public void runRightFront(double speed){
         rightFront.setSpeed(speed);
     }
 

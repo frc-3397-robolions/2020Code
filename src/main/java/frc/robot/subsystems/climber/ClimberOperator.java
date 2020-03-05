@@ -8,6 +8,15 @@ public class ClimberOperator {
 
         
     }
+    public void autoRun(){
+
+    }
+    public void teleopRun(){
+
+    }
+    public void testRun(){
+        
+    }
 
 
 

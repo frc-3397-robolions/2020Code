@@ -8,4 +8,13 @@ public class ColorWheelOperator{
 
         
     }
+    public void autoRun(){
+
+    }
+    public void teleopRun(){
+
+    }
+    public void testRun(){
+        
+    }
 }

@@ -13,5 +13,6 @@ public class ShooterBase{
         motor1.setSpeed(speed);
         
     }
+    public void runMotor2
 
 }

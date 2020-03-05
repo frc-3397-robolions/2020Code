@@ -9,5 +9,9 @@ public class ShooterBase{
         motor1 = new Victor(port1);
         motor2 = new Victor(port2);
     }
+    public void runMotor1(int speed){
+        motor1.setSpeed(speed);
+        
+    }
 
 }

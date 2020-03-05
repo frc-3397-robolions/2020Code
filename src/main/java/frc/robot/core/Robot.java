@@ -134,9 +134,9 @@ public class Robot extends TimedRobot {
      */
     @Override
     public void teleopPeriodic() {
-        xSpeed = m_xspeedLimiter.calculate(-oi.Xbox().getLeftJoystickX());
-        ySpeed = m_yspeedLimiter.calculate(-oi.Xbox().getLeftJoystickY());
-        rot = m_rotLimiter.calculate(oi.Xbox().getRightJoystickX());
+        xSpeed = m_xspeedLimiter.calculate(-oi.xBox().getLeftJoystickX());
+        ySpeed = m_yspeedLimiter.calculate(-oi.xBox().getLeftJoystickY());
+        rot = m_rotLimiter.calculate(oi.xBox().getRightJoystickX());
         String targetColor = SmartDashboard.getString("Target Color", "blue");
         Scheduler.getInstance().run();
         
@@ -149,7 +149,7 @@ public class Robot extends TimedRobot {
         // } else {
         //     intake.runIntake(0, false);
         // }
-        if(oi.Xbox().getAButton()){
+        if(oi.xBox().getAButton()){
             if(!targetColor.equalsIgnoreCase(cSensor.detectColor())){
                 intake.runIntake(0.225, false);
             } else {

@@ -3,9 +3,8 @@ package frc.robot.subsystems.auto;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
-import edu.wpi.first.wpilibj.command.Subsystem;
 
-public class Camera extends Subsystem {
+public class Camera {
     NetworkTableEntry centerXEntry;
     public Camera(){
         NetworkTableInstance  inst = NetworkTableInstance.getDefault();
@@ -14,9 +13,5 @@ public class Camera extends Subsystem {
         
     }
 
-    @Override
-    protected void initDefaultCommand() {
-        // TODO Auto-generated method stub
-
-    }
+    
 }

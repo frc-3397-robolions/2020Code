@@ -11,11 +11,6 @@
 
 package frc.robot.controls;
 
-import edu.wpi.first.wpilibj.GenericHID.Hand;
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.XboxController;
-
-
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
@@ -28,7 +23,6 @@ public class OI {
     public OI() {
         fightStick = new FightStick(1);
         xboxController = new XboxControl(0);
-
     }
     public XboxControl xBox() {
         return xboxController;

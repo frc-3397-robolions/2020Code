@@ -25,7 +25,11 @@ public class FightStick {
     public boolean getFSBButton(){
         return fightStick.getRawButton(1);
     }
-    
+    public boolean getButton(){
+
+
+        return false;
+    }
 
 
     

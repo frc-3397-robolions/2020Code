@@ -18,6 +18,6 @@ public class SmartDB{
         dTB = new DriveTrainBase();
     }
     protected void execute(){
-        SmartDashboard.putData("LeftFrontMotor", dTB.runLeftFront(1));
+        
     }
 }

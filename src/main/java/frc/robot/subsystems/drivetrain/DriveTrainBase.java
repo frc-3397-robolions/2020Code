@@ -3,7 +3,7 @@ package frc.robot.subsystems.drivetrain;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.drive.MecanumDrive;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.robot.RobotConstants;
+import frc.robot.core.RobotConstants;
 
 public class DriveTrainBase {
     private Victor leftFront;

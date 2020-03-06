@@ -1,7 +1,7 @@
 package frc.robot.subsystems.intake;
 
 import edu.wpi.first.wpilibj.Victor;
-import frc.robot.RobotConstants;
+import frc.robot.core.RobotConstants;
 
 public class IntakeBase {
     private final Victor motor1;

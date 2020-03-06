@@ -153,28 +153,28 @@ public class Robot extends TimedRobot {
         // } else {
         //     intake.runIntake(0, false);
         // }
-        if(oi.xBox().getAButton()){
-            if(!targetColor.equalsIgnoreCase(cSensor.detectColor())){
-                intake.runIntake(0.225, false);
-            } else {
+        // if(oi.xBox().getAButton()){
+        //     if(!targetColor.equalsIgnoreCase(cSensor.detectColor())){
+        //         intake.runIntake(0.225, false);
+        //     } else {
                 
               
                
-                if(wheelTimer.get() < 0.125){
-                    intake.runIntake(-0.8, false);
+        //         if(wheelTimer.get() < 0.125){
+        //             intake.runIntake(-0.8, false);
                    
-                } else {
-                    intake.runIntake(0, false);
-                    wheelTimer.reset();
-                    System.out.println("Stopped");
-                }
+        //         } else {
+        //             intake.runIntake(0, false);
+        //             wheelTimer.reset();
+        //             System.out.println("Stopped");
+        //         }
                
-            }
+        //     }
 
-        } else {
-            intake.runIntake(0, false);
-            wheelTimer.reset();
-        }
+        // } else {
+        //     intake.runIntake(0, false);
+        //     wheelTimer.reset();
+        // }
         // if(oi.getBButton()){
         //     intake.runIntake(0.4, false);
         // } else {

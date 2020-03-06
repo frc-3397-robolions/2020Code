@@ -10,9 +10,15 @@ public class ShooterBase{
         motor2 = new Victor(port2);
     }
     public void runMotor1(int speed){
-        motor1.setSpeed(speed);
+        motor1.set(speed);
         
     }
-    public void runMotor2
+    public void runMotor2(int speed){
+        motor2.set(speed);
+    }
+    public void runBothMotor(int speed1, int speed2){
+        motor1.set(speed1);
+        motor2.set(speed2);
+    }
 
 }

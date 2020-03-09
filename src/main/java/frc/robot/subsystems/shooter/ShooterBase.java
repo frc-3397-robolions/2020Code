@@ -1,13 +1,14 @@
 package frc.robot.subsystems.shooter;
 
 import edu.wpi.first.wpilibj.Victor;
+import frc.robot.core.RobotConstants;
 
 public class ShooterBase{
     private Victor motor1;
     private Victor motor2; 
-    public ShooterBase(int port1, int port2) {
-        motor1 = new Victor(port1);
-        motor2 = new Victor(port2);
+    public ShooterBase() {
+        motor1 = new Victor(RobotConstants.MotorConstants.SHOOTER_MOTOR_PWM1);
+        motor2 = new Victor(RobotConstants.MotorConstants.SHOOTER_MOTOR_PWM2);
     }
     public void runMotor1(int speed){
         motor1.set(speed);

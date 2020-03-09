@@ -7,6 +7,7 @@ import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import frc.robot.controls.OI;
+import frc.robot.subsystems.auto.AutoOperator;
 import frc.robot.subsystems.climber.ClimberOperator;
 import frc.robot.subsystems.colorwheel.ColorWheelOperator;
 import frc.robot.subsystems.drivetrain.DriveTrainOperator;
@@ -15,13 +16,15 @@ import frc.robot.subsystems.shooter.ShooterOperator;
 
 public class Robot extends TimedRobot {
 
-    public OI oi;
-    public DriveTrainOperator driveTrain;
-    public IntakeOperator intake;
-    public ShooterOperator shooter;
-    public ClimberOperator climber;
+    private OI oi;
+    private DriveTrainOperator driveTrain;
+    private IntakeOperator intake;
+    private ShooterOperator shooter;
+    private ClimberOperator climber;
     private PowerDistributionPanel pdp;
-    public ColorWheelOperator cWheel;
+    private ColorWheelOperator cWheel;
+    private AutoOperator auto;
+
 
     @Override
     public void robotInit() {
@@ -31,6 +34,7 @@ public class Robot extends TimedRobot {
         shooter = new ShooterOperator();
         climber = new ClimberOperator();
         cWheel = new ColorWheelOperator();
+        auto = new AutoOperator();
         oi = new OI();
         pdp = new PowerDistributionPanel();
         HAL.report(tResourceType.kResourceType_Framework, tInstances.kFramework_RobotBuilder);
@@ -49,12 +53,12 @@ public class Robot extends TimedRobot {
 
     @Override
     public void autonomousInit() {
-
+        auto.autoInit();
     }
 
     @Override
     public void autonomousPeriodic() {
-        
+        auto.run();
         Scheduler.getInstance().run();
 
     }

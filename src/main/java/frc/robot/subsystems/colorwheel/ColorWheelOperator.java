@@ -8,9 +8,6 @@ public class ColorWheelOperator{
 
         
     }
-    public void autoRun(){
-
-    }
     public void teleopRun(){
         // if (Math.abs(oi.getLeftTrigger()) > 0){
         // intake.runIntake(0.4, false);

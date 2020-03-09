@@ -18,16 +18,12 @@ public class DriveTrainBase {
 
     public DriveTrainBase(){
         leftFrontM = new Victor(RobotConstants.MotorConstants.LEFT_FRONT_MOTOR_PWM);
-        leftFrontM.setInverted(false);
         
         leftRearM = new Victor(RobotConstants.MotorConstants.LEFT_REAR_MOTOR_PWM);
-        leftRearM.setInverted(false);
 
         rightFrontM = new Victor(RobotConstants.MotorConstants.RIGHT_FRONT_MOTOR_PWM);
-        rightFrontM.setInverted(false);
 
         rightRearM = new Victor(RobotConstants.MotorConstants.RIGHT_REAR_MOTOR_PWM);
-        rightRearM.setInverted(false);
 
         mecanumDrive = new MecanumDrive(leftFrontM, leftRearM, rightFrontM, rightRearM);
 
@@ -38,8 +34,10 @@ public class DriveTrainBase {
         mecanumDrive.setDeadband(0.075);
         mecanumDrive.setRightSideInverted(false);
 
-        leftFrontE = new Encoder(0, 1);
-        leftRearE = new Encoder(, sourceB)
+        leftFrontE = new Encoder(RobotConstants.MotorConstants.LEFT_FRONT_MOTOR_PORT[0], RobotConstants.MotorConstants.LEFT_FRONT_MOTOR_PORT[1]);
+        leftRearE = new Encoder(RobotConstants.MotorConstants.LEFT_REAR_MOTOR_PORT[0], RobotConstants.MotorConstants.LEFT_REAR_MOTOR_PORT[1]);
+        rightFrontE = new Encoder(RobotConstants.MotorConstants.RIGHT_FRONT_MOTOR_PORT[0], RobotConstants.MotorConstants.RIGHT_FRONT_MOTOR_PORT[1]);
+        rightRearE = new Encoder(RobotConstants.MotorConstants.RIGHT_REAR_MOTOR_PORT[0], RobotConstants.MotorConstants.RIGHT_REAR_MOTOR_PORT[1]);
     }
 
     

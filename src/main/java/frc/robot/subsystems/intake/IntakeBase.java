@@ -4,31 +4,36 @@ import edu.wpi.first.wpilibj.Victor;
 import frc.robot.core.RobotConstants;
 
 public class IntakeBase {
-    private static Victor motor1;
-    private static Victor motor2;
+    private static Victor intakeMotor;
+    private static Victor elevatorMotor;
 
     public IntakeBase() {
-        motor1 = new Victor(RobotConstants.MotorConstants.INTAKE_MOTOR_PWM1);
-        motor2 = new Victor(RobotConstants.MotorConstants.INTAKE_MOTOR_PWM2);
+        intakeMotor = new Victor(RobotConstants.MotorConstants.INTAKE_MOTOR_PWM1);
+        elevatorMotor = new Victor(RobotConstants.MotorConstants.INTAKE_MOTOR_PWM2);
 
     }
 
     public void runMotor1(double speed) {
-        motor1.set(speed);
+        intakeMotor.set(speed);
     }
 
     public void runMotor2(double speed) {
-        motor2.set(speed);
+        elevatorMotor.set(speed);
     }
 
     public void runBothMotor(double speed1, double speed2) {
-        motor1.set(speed1);
-        motor2.set(speed2);
+        intakeMotor.set(speed1);
+        elevatorMotor.set(speed2);
 
     }
-
+    public void inTake(){
+        intakeMotor.set(-0.75);
+    }
+    public void outTake(){
+        intakeMotor.set(0.75);
+    }
     public static double getMotorSpeed() {
-        return motor1.getSpeed();
+        return intakeMotor.getSpeed();
     }
     
 

@@ -22,6 +22,12 @@ public class ClimberBase {
         motor1.set(speed1);
         motor2.set(speed2);
     }
+    public void climb(){
+
+    }
+    public void release(){
+        
+    }
 
    
 

@@ -17,7 +17,7 @@ public class ShooterOperator{
     }
     public void teleopRun(){
         if(oi.xBox().getRightTrigger() > 0){
-            base.runBothMotor(1, 1);
+            
         }
     }
     public void testRun(){

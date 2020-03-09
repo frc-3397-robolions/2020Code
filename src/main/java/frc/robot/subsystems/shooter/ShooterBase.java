@@ -21,5 +21,13 @@ public class ShooterBase{
         motor1.set(speed1);
         motor2.set(speed2);
     }
+    public void trenchShot(){
+        motor1.set(1);
+        motor2.set(1);
+    }
+    public void lineShot(){
+        motor1.set(.49);
+        motor2.set(.49);
+    }
 
 }

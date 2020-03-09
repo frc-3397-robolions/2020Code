@@ -23,6 +23,7 @@ public class FightStick {
     public double getRightTrigger(){
         return fightStick.getRawAxis(3);
     }
+    
     //Buttons
     public boolean getXButton(){
         return fightStick.getRawButton(2);

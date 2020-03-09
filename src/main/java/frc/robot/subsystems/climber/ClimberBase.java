@@ -9,8 +9,8 @@ public class ClimberBase {
     
 
     public ClimberBase() {
-       motor1 = new VictorSP(RobotConstants.PWMConstants.CLIMBER_MOTOR_PWM1);
-       motor2 = new VictorSP(RobotConstants.PWMConstants.CLIMBER_MOTOR_PWM2);
+       motor1 = new VictorSP(RobotConstants.MotorConstants.CLIMBER_MOTOR_PWM1);
+       motor2 = new VictorSP(RobotConstants.MotorConstants.CLIMBER_MOTOR_PWM2);
     }
 
    

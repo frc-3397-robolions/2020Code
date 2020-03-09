@@ -8,8 +8,8 @@ public class IntakeBase {
     private static Victor motor2;
 
     public IntakeBase() {
-        motor1 = new Victor(RobotConstants.PWMConstants.INTAKE_MOTOR_PWM1);
-        motor2 = new Victor(RobotConstants.PWMConstants.INTAKE_MOTOR_PWM2);
+        motor1 = new Victor(RobotConstants.MotorConstants.INTAKE_MOTOR_PWM1);
+        motor2 = new Victor(RobotConstants.MotorConstants.INTAKE_MOTOR_PWM2);
 
     }
 

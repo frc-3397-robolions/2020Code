@@ -18,21 +18,16 @@ public class DriveTrainBase {
 
     public DriveTrainBase(){
         leftFrontM = new Victor(RobotConstants.MotorConstants.LEFT_FRONT_MOTOR_PWM);
-        
         leftRearM = new Victor(RobotConstants.MotorConstants.LEFT_REAR_MOTOR_PWM);
-
         rightFrontM = new Victor(RobotConstants.MotorConstants.RIGHT_FRONT_MOTOR_PWM);
-
         rightRearM = new Victor(RobotConstants.MotorConstants.RIGHT_REAR_MOTOR_PWM);
 
         mecanumDrive = new MecanumDrive(leftFrontM, leftRearM, rightFrontM, rightRearM);
 
         mecanumDrive.setSafetyEnabled(true);
-        mecanumDrive.setExpiration(0.1);
-        mecanumDrive.setMaxOutput(0.6);
-
-        mecanumDrive.setDeadband(0.075);
+        mecanumDrive.setDeadband(0.1);
         mecanumDrive.setRightSideInverted(false);
+        
 
         leftFrontE = new Encoder(RobotConstants.MotorConstants.LEFT_FRONT_MOTOR_PORT[0], RobotConstants.MotorConstants.LEFT_FRONT_MOTOR_PORT[1]);
         leftRearE = new Encoder(RobotConstants.MotorConstants.LEFT_REAR_MOTOR_PORT[0], RobotConstants.MotorConstants.LEFT_REAR_MOTOR_PORT[1]);

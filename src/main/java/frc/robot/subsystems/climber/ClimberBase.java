@@ -23,10 +23,12 @@ public class ClimberBase {
         motor2.set(speed2);
     }
     public void climb(){
-
+        motor1.set(1);
+        motor2.set(1);           
     }
     public void release(){
-        
+        motor1.set(-1);
+        motor2.set(-1);
     }
 
    

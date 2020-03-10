@@ -21,6 +21,9 @@ public class Pi {
     public double getArea(){
         return 0;
     }
+    public double getProportion(){
+        return 0;
+    }
 
     
 }

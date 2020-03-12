@@ -17,10 +17,11 @@ public class ShooterOperator{
     }
     public void teleopRun(){
         if(oi.fightStick().getXButton()){
-            base.runBothMotor(.4, .4);
+            base.runBothMotor(1, 1);
         } else {
             base.runBothMotor(0, 0);
         }
+       
     }
     public void testRun(){
         if(oi.xBox().getRightTrigger() > 0.1){

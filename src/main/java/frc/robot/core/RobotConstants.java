@@ -14,7 +14,7 @@ public final class RobotConstants{
         public static int LEFT_FRONT_MOTOR_PORT2 = 5; 
         public static int LEFT_REAR_MOTOR_PORT1 = 2;
         public static int LEFT_REAR_MOTOR_PORT2 = 3;
-        ;
+        
         public static int RIGHT_FRONT_MOTOR_PORT1 = 6;
         public static int RIGHT_FRONT_MOTOR_PORT2 = 7;
         public static int RIGHT_REAR_MOTOR_PORT1 = 0;

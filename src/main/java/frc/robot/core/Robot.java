@@ -34,7 +34,7 @@ public class Robot extends TimedRobot {
         shooter = new ShooterOperator();
         // climber = new ClimberOperator();
         // cWheel = new ColorWheelOperator();
-        // auto = new AutoOperator();
+        auto = new AutoOperator();
         oi = new OI();
         pdp = new PowerDistributionPanel();
         HAL.report(tResourceType.kResourceType_Framework, tInstances.kFramework_RobotBuilder);

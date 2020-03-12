@@ -15,7 +15,7 @@ public class IntakeOperator{
 
     }
     public void teleopRun(){
-        if(oi.fightStick().getAButton()){
+        if(oi.fightStick().getYButton()){
             base.runElevator(-.2);
         } else {
             base.runElevator(0);

@@ -16,7 +16,7 @@ public class ShooterOperator{
 
     }
     public void teleopRun(){
-        if(oi.xBox().getRightTrigger() > 0){
+        if(oi.fightStick().getXButton()){
             base.runBothMotor(.4, .4);
         } else {
             base.runBothMotor(0, 0);

@@ -8,12 +8,12 @@ public class IntakeBase {
     private static Victor elevatorMotor;
 
     public IntakeBase() {
-        // intakeMotor = new Victor(RobotConstants.MotorConstants.INTAKE_MOTOR_PWM1);
+        intakeMotor = new Victor(RobotConstants.MotorConstants.INTAKE_MOTOR_PWM1);
         elevatorMotor = new Victor(RobotConstants.MotorConstants.INTAKE_MOTOR_PWM2);
 
     }
 
-    public void runMotor1(double speed) {
+    public void runIntake(double speed) {
         intakeMotor.set(speed);
     }
 
@@ -27,10 +27,10 @@ public class IntakeBase {
 
     }
     public void inTake(){
-        intakeMotor.set(-0.75);
+        intakeMotor.set(-0.5);
     }
     public void outTake(){
-        intakeMotor.set(0.75);
+        intakeMotor.set(0.5);
     }
     public static double getMotorSpeed() {
         return intakeMotor.getSpeed();

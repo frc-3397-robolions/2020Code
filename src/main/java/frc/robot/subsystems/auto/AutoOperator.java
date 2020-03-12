@@ -1,5 +1,6 @@
 package frc.robot.subsystems.auto;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -9,6 +10,7 @@ public class AutoOperator {
     private static final String kLeftAuto = "Left Auto";
     private static final String kMiddleAuto = "Middle Auto"; 
     private String m_autoSelected;
+    private Timer autoTimer;
     public AutoOperator(){
         auto_chooser.setDefaultOption("Middle Auto", kMiddleAuto);
         auto_chooser.addOption("Right Auto", kRightAuto);
@@ -17,31 +19,35 @@ public class AutoOperator {
     }
     public void autoInit(){
         m_autoSelected = auto_chooser.getSelected();
-       
+        autoTimer = new Timer();
+        autoTimer.start();
         System.out.println("Auto selected: " + m_autoSelected);
         
        
      }
     
     public void run(){
-        switch (m_autoSelected){
- 
-            case "Middle Auto":
+        if(autoTimer.get() < 5){
             
-            
-
-
-            case "Left Auto":
- 
-
-
-
-            case "Right Auto":
- 
-
-
-
         }
+        // switch (m_autoSelected){
+ 
+        //     case "Middle Auto":
+            
+            
+
+
+        //     case "Left Auto":
+ 
+
+
+
+        //     case "Right Auto":
+ 
+
+
+
+        // }
     }
 
 }

@@ -11,8 +11,11 @@ public final class RobotConstants{
 
         // Drive Encoders
         public static int[] LEFT_FRONT_MOTOR_PORT;
-        public static int[] LEFT_REAR_MOTOR_PORT;
-        public static int[] RIGHT_FRONT_MOTOR_PORT;
+        public static int LEFT_REAR_MOTOR_PORT1;
+        public static int LEFT_REAR_MOTOR_PORT2+-
+        ;
+        public static int RIGHT_FRONT_MOTOR_PORT1;
+        public static int RIGHT_FRONT_MOTOR_PORT2;
         public static int RIGHT_REAR_MOTOR_PORT1 = 0;
         public static int RIGHT_REAR_MOTOR_PORT2 = 1;
 

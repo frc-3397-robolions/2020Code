@@ -29,5 +29,9 @@ public class ShooterBase{
         motor1.set(.49);
         motor2.set(.49);
     }
+    public void stopShooter(){
+        motor1.set(0);
+        motor2.set(0);
+    }
 
 }

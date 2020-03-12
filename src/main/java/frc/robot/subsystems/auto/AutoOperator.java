@@ -13,6 +13,8 @@ public class AutoOperator {
     private ShooterBase sBase;
     private String m_autoSelected;
     private Timer autoTimer;
+    private boolean STAGE1;
+    private boolean STAGE2; 
     public AutoOperator(){
         auto_chooser.setDefaultOption("Middle Auto", kMiddleAuto);
         auto_chooser.addOption("Right Auto", kRightAuto);
@@ -21,19 +23,31 @@ public class AutoOperator {
 
     }
     public void autoInit(){
+        STAGE1 = true;
+        STAGE2 = false;
         m_autoSelected = auto_chooser.getSelected();
         autoTimer = new Timer();
         sBase = new ShooterBase();
         autoTimer.start();
+
         System.out.println("Auto selected: " + m_autoSelected);
         
        
      }
     
     public void run(){
-        if(autoTimer.get() < 5){
+        if(STAGE1){
+            sBase.lineShot();
+            if(autoTimer.get() > 5 && autoTimer.get() < 10){
+
+            }
+        }
+        if(STAGE2){
             
         }
+       
+
+        
         // switch (m_autoSelected){
  
         //     case "Middle Auto":

@@ -3,6 +3,7 @@ package frc.robot.subsystems.auto;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Pi {
     NetworkTableEntry centerXEntry;
@@ -13,6 +14,7 @@ public class Pi {
         inst = NetworkTableInstance.getDefault();
         table = inst.getTable("pi");
         centerXEntry = table.getEntry("centerX");
+       
         
     }
     public double getCenterX(){

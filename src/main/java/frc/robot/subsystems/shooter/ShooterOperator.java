@@ -17,11 +17,23 @@ public class ShooterOperator{
     }
     public void teleopRun(){
         if(oi.xBox().getRightTrigger() > 0){
-            
+            base.runBothMotor(.4, .4);
+        } else {
+            base.runBothMotor(0, 0);
         }
     }
     public void testRun(){
-        
+        if(oi.xBox().getRightTrigger() > 0.1){
+            
+            base.runRight(.5);
+        } else {
+            base.runRight(0);
+        }
+        if(oi.xBox().getLeftTrigger() > 0.1){
+            base.runLeft(.5);
+        } else {
+            base.runLeft(0);
+        }
     }
 
 

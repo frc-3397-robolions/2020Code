@@ -32,9 +32,9 @@ public class Robot extends TimedRobot {
         driveTrain = new DriveTrainOperator();
         intake = new IntakeOperator();
         shooter = new ShooterOperator();
-        climber = new ClimberOperator();
-        cWheel = new ColorWheelOperator();
-        auto = new AutoOperator();
+        // climber = new ClimberOperator();
+        // cWheel = new ColorWheelOperator();
+        // auto = new AutoOperator();
         oi = new OI();
         pdp = new PowerDistributionPanel();
         HAL.report(tResourceType.kResourceType_Framework, tInstances.kFramework_RobotBuilder);
@@ -75,8 +75,8 @@ public class Robot extends TimedRobot {
         driveTrain.teleopRun();
         intake.teleopRun();
         shooter.teleopRun();
-        climber.teleopRun();
-        cWheel.teleopRun();
+        // climber.teleopRun();
+        // cWheel.teleopRun();
         
     }
 
@@ -85,8 +85,8 @@ public class Robot extends TimedRobot {
         driveTrain.testRun();
         intake.testRun();
         shooter.testRun();
-        climber.testRun();
-        cWheel.testRun();
+        // climber.testRun();
+        // cWheel.testRun();
 
     }
 

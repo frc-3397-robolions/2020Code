@@ -10,14 +10,14 @@ public class ShooterBase{
         motor1 = new Victor(RobotConstants.MotorConstants.SHOOTER_MOTOR_PWM1);
         motor2 = new Victor(RobotConstants.MotorConstants.SHOOTER_MOTOR_PWM2);
     }
-    public void runMotor1(int speed){
+    public void runLeft(double speed){
         motor1.set(speed);
         
     }
-    public void runMotor2(int speed){
+    public void runRight(double speed){
         motor2.set(speed);
     }
-    public void runBothMotor(int speed1, int speed2){
+    public void runBothMotor(double speed1, double speed2){
         motor1.set(speed1);
         motor2.set(speed2);
     }

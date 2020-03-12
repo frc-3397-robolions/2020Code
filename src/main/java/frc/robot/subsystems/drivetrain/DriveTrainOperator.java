@@ -1,11 +1,10 @@
 package frc.robot.subsystems.drivetrain;
 
 import edu.wpi.first.wpilibj.SlewRateLimiter;
-import edu.wpi.first.wpilibj.controller.RamseteController;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.controls.OI;
 
 public class DriveTrainOperator {
-    RamseteController controller;
     private OI oi;
     private DriveTrainBase base;
     private SlewRateLimiter ySpeedLimiter;
@@ -17,25 +16,27 @@ public class DriveTrainOperator {
     public DriveTrainOperator(){
         oi = new OI();
         base = new DriveTrainBase();
-        ySpeedLimiter = new SlewRateLimiter(0.5);
-        xSpeedLimiter = new SlewRateLimiter(0.5);
-        zRotationLimiter = new SlewRateLimiter(0.5);
-        controller = new RamseteController();
-        controller.calculate(currentPose, poseRef, linearVelocityRefMeters, angularVelocityRefRadiansPerSecond)
+        ySpeedLimiter = new SlewRateLimiter(1);
+        xSpeedLimiter = new SlewRateLimiter(1);
+        zRotationLimiter = new SlewRateLimiter(1);
+       
     }
    
     public void autoRun(){
-
+        
     }
     public void teleopInit(){
         
     }
     public void teleopRun(){
-        ySpeed =  ySpeedLimiter.calculate(oi.xBox().getLeftJoystickY());
-        xSpeed = xSpeedLimiter.calculate(oi.xBox().getLeftJoystickX());
+        ySpeed = xSpeedLimiter.calculate(oi.xBox().getLeftJoystickX()); 
+        xSpeed =  -ySpeedLimiter.calculate(oi.xBox().getLeftJoystickY());
         zRotation = zRotationLimiter.calculate(oi.xBox().getRightJoystickX());
-
         base.runMecanumDrive(ySpeed, xSpeed, zRotation);
+       
+        SmartDashboard.putNumber("RREncoder", base.getRightRearEncoder().getRaw());
+        SmartDashboard.putNumber("Robot Angle", base.getAHRS().getRoll());
+        
     }
     public void testRun(){
     /*
